@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+{% bootstrap_messages %}
+{% block content %}
+   
+   <h1>Tasks</h1>
+
+   <form action="" method="POST">
+	{% csrf_token %}
+	{% bootstrap_form form %}
+	{% buttons %}
+	<button type="submit" class="btn btn-primary">
+		 Submit
+	</button>
+
+	{% endbuttons %}
+   </form>
+
+   
+
+
+{% endblock %}

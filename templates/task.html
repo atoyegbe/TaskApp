@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container justify-content-center">
+
+<div class="">
+    <h5>{{task.title}}</h5>
+    <p class="text-monospace">{{task.description}}</p>
+    <a href="{% url 'delete' task.id %}" type="submit" class="btn btn-danger"> Delete </a>
+    
+</div>
+
+</div>
+
+
+   
+
+
+
+{% endblock %}
