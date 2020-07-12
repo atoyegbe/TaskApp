@@ -26,7 +26,7 @@ SECRET_KEY = '11+k)eqmh!(p3jy4$gysm*3gbd)2k%u$&sm*la=vzut+oj1)=e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sarcina.herokuapp.com', '127.0.0.1','localhost',]
 
 
 # Application definition
