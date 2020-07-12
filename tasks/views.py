@@ -9,15 +9,15 @@ def home(request):
 		if forms.is_valid():
 			forms.save()
 
-			return redirect('home')
+			return redirect("home")
 
-	template_name = 'index.html'
+	template_name = "index.html"
 	return render(request, template_name, context={'form': forms})
 
 
 def viewTasks(request):
 	all_tasks = Task.objects.all()
-	template_name='tasks.html'
+	template_name="tasks.html"
 
 	return render(request, template_name, context={'all_tasks': all_tasks})
 
