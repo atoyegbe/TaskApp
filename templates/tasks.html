@@ -2,6 +2,7 @@
 
 {% block content %}
 <hr>
+{% if tasks %}
 	{% for task in tasks %}
 		<div class="col "> 
 			<div class="list-group">
@@ -15,10 +16,10 @@
 			  </div>
 			</div>
 			<hr>
-
-		
-	
   {% endfor %}
+{% else %}
+	<h1> You don't have any task yet</h1>
+{% endif %}
   
 
-{% endblock %}
+{% endblock %} 
