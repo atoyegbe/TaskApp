@@ -16,10 +16,10 @@ def home(request):
 
 
 def viewTasks(request):
-	tasks = Task.objects.all()
+	all_tasks = Task.objects.all()
 	template_name='tasks.html'
 
-	return render(request, template_name, context={'tasks': tasks})
+	return render(request, template_name, context={'all_tasks': all_tasks})
 
 def taskView(request, pk):
 	task = Task.objects.get(id=pk)

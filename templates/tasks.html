@@ -2,7 +2,7 @@
 
 {% block content %}
 <hr>
-	{% for task in tasks %}
+	{% for task in all_tasks %}
 		<div class="col "> 
 			<div class="list-group">
 				<a href="{% url 'task' task.id %}" class="list-group-item list-group-item-action">
