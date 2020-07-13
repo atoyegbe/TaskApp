@@ -3,6 +3,7 @@
 {% block title %} Tasks {% endblock %}
 {% block content %}
 <hr>
+{% if tasks %}
 	{% for task in all_tasks %}
 		<div class="col "> 
 			<div class="list-group">
@@ -17,5 +18,8 @@
 			</div>
 			<hr>
   {% endfor %}
+  {% else %}
+     No Task for you yet ....
+  {% endif %}
 
 {% endblock %} 
