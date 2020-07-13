@@ -3,16 +3,16 @@ from .forms import TaskForm
 from .models import *
 # Create your views here.
 def home(request):
-	forms = TaskForm()
+	form = TaskForm()
 	if request.method == 'POST':
-		forms = TaskForm(request.POST)
-		if forms.is_valid():
-			forms.save()
+		form = TaskForm(request.POST)
+		if form.is_valid():
+			form.save()
 
 			return redirect("home")
 
 	template_name = "index.html"
-	return render(request, template_name, context={'form': forms})
+	return render(request, template_name, context={'form': form})
 
 
 def viewTasks(request):
