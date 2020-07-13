@@ -34,7 +34,7 @@ def deleteTask(request, pk):
 
 	if request.method == 'POST':
 		task_d.delete()
-		return redirect('tasks')
+		return redirect('viewtasks')
 
 	template_name='delete.html'
 	context = {'task_d': task_d}
