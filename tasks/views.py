@@ -16,13 +16,13 @@ def home(request):
 
 
 def viewTasks(request):
-	all_tasks = Task.objects.all()
+	all_tasks = TaskApp.objects.all()
 	template_name="tasks.html"
 
 	return render(request, template_name, context={'all_tasks': all_tasks})
 
 def taskView(request, pk):
-	task = Task.objects.get(id=pk)
+	task = TaskApp.objects.get(id=pk)
 
 	template_name = 'task.html'
 	context = {'task': task}
@@ -30,7 +30,7 @@ def taskView(request, pk):
 
 def deleteTask(request, pk):
 
-	task_d = Task.objects.get(id=pk)
+	task_d = TaskApp.objects.get(id=pk)
 
 	if request.method == 'POST':
 		task_d.delete()

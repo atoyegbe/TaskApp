@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Task(models.Model):
+class TaskApp(models.Model):
 	title = models.CharField(max_length=100)
 	description = models.TextField()
 	is_complete = models.BooleanField(default=False)
