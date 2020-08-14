@@ -10,6 +10,7 @@ pytest = "*"
 pytest-django = "*"
 pytest-cov = "*"
 mixer = "*"
+pytest-sugar = "*"
 
 [requires]
 python_version = "3.8"
